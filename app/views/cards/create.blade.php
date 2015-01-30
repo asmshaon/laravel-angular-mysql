@@ -2,14 +2,10 @@
 
 <div ng-controller="cardController">
 
-{{user}}
-
     <% Form::open(['route'=>'cards.store', "ng-submit" => "submit()", 'method'=>'post', 'class'=>'form-horizontal', 'id'=>'form', 'name' => 'form']) %>
         <fieldset>
           <legend>Add New Credit Card</legend>
-
-
-
+          
           <div class="form-group">
               <label class="col-sm-3 control-label" for="card-holder-name">First Name</label>
               <div class="col-sm-9">
