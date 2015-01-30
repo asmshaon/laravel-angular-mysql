@@ -1,0 +1,16 @@
+{
+    "name": "laravel 4 bower components",
+    "version": "4",
+    "authors": [
+        "Abu Saleh Muhammad Shaon <srabon.php@gmail.com>"
+    ],
+    "description": "laravel 4 with bower",
+    "license": "MIT",
+    "dependencies": {
+        "jquery" : "2.1.*",
+        "bootstrap": "~3.2.*",
+        "font-awesome": "~4.3.*",
+        "bootstrap-datepicker" : "~1.3.*",
+        "angular" : "1.3.11"
+    }
+}

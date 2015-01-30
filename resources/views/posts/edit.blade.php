@@ -1,0 +1,1 @@
+/home/developer/projects/laravel/resources/views/posts/edit.blade.php

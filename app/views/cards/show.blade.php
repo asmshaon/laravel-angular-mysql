@@ -1,0 +1,1 @@
+/home/developer/projects/laravel/app/views/cards/show.blade.php
