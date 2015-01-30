@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
     <meta charset="utf-8"/>
     <title>
         @section("title")
-        {{$title}}
+        <%$title%>
         @show
     </title>
     <meta name="keywords" content="your, awesome, keywords, here"/>
     <meta name="author" content="Abu Saleh Muhammad Shaon"/>
     <meta name="description" content="Lorem ipsum dolor sit amet, nihil fabulas et sea, nam posse menandri scripserit no, mei."/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {{HTML::style('bower_components/bootstrap/dist/css/bootstrap.css');}}
-    {{HTML::style('css/styles.css');}}
+    <%HTML::style('bower_components/bootstrap/dist/css/bootstrap.css');%>
+    <%HTML::style('css/styles.css');%>
+    <%HTML::script('js/scripts.js');%>
+    <%HTML::script('bower_components/angular/angular.min.js');%>
+    <%HTML::script('js/app.js');%>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -59,14 +62,14 @@
                 @if (!Auth::check())
                     <ul class="nav navbar-nav">
                         <li>
-                            {{ HTML::link('#', 'Register') }}
+                            <% HTML::link('#', 'Register') %>
                         </li>
                         <li>
-                            {{ HTML::link('#', 'Log In') }}
+                            <% HTML::link('#', 'Log In') %>
                         </li>
                     </ul>
                 @else
-                    <div class="welcome-user">Hi, {{Auth::user()->name}} <a title="Logout" href="/logout"><i class="fa fa-sign-out icon-white"></i></a></div>
+                    <div class="welcome-user">Hi, <%Auth::user()->name%> <a title="Logout" href="/logout"><i class="fa fa-sign-out icon-white"></i></a></div>
                 @endif
             </div>
         </div>
@@ -74,12 +77,13 @@
     </div>
 </div>
 <div class="container theme-showcase l4body">
+
     <!-- Content -->
     @yield('content')
     <!-- ./ content -->
 </div>
-{{HTML::script('bower_components/jquery/jquery.js');}}
-{{HTML::script('bower_components/bootstrap/dist/js/bootstrap.js');}}
-{{HTML::script('js/scripts.js');}}
+<%HTML::script('bower_components/jquery/jquery.js');%>
+<%HTML::script('bower_components/bootstrap/dist/js/bootstrap.js');%>
+
 </body>
 </html>

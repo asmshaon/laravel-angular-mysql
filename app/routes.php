@@ -16,6 +16,9 @@ Validator::resolver(function($translator, $data, $rules, $messages)
 	return new ArdaValidator($translator, $data, $rules, $messages);
 });
 
+Blade::setContentTags('<%', '%>');
+Blade::setEscapedContentTags('<%%', '%%>');
+
 Route::get('/', function()
 {
 	return View::make('hello');
