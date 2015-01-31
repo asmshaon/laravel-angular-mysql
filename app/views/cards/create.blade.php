@@ -1,7 +1,6 @@
 @section('content')
 
 <div ng-controller="cardController">
-
     <% Form::open(['route'=>'cards.store', "ng-submit" => "submit()", 'method'=>'post', 'class'=>'form-horizontal', 'id'=>'form', 'name' => 'form']) %>
         <fieldset>
           <legend>Add New Credit Card</legend>
